@@ -8,7 +8,10 @@
     'category' : 'Sales',
     'website' : 'www.example.com',
     'depends' : [],
-    'data' : [],
+    'data' : [
+        'security/ir.model.access.csv',
+        'views/patient.xml'
+    ],
     'demo' : [],
     'qweb' : [],
     'installable' : True,
