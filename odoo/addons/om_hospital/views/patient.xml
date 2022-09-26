@@ -64,7 +64,7 @@
     </record>
 
 
-<!--KANBAN VIEW-->
+<!--TREE VIEW-->
 
     <record id="patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
