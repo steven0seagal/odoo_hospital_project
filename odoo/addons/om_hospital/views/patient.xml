@@ -38,7 +38,7 @@
     </record>
 
 <!--SEARCH VIEW-->
-    <record id="patient_seqrch" model="ir.ui.view">
+    <record id="patient_search" model="ir.ui.view">
         <field name="name">hospital.patient.search</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
@@ -64,19 +64,51 @@
     </record>
 
 
+<!--KANBAN VIEW-->
 
-
-<!--TREE VIEW-->
     <record id="patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="id"/>
                 <field name="name"/>
                 <field name="age"/>
                 <field name="gender"/>
 
             </tree>
+        </field>
+    </record>
+
+<!--KANBAN VIEW-->
+    <record id="patient_kanban" model="ir.ui.view">
+        <field name="name">hospital.patient.kanban</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li>
+                                        <field name="name"/>
+                                    </li>
+                                    <li>
+                                        <field name="age"/>
+                                    </li>
+                                    <li>
+                                        <field name="gender"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 
